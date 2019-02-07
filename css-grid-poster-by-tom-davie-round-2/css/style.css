@@ -1,0 +1,219 @@
+/* ORIGINAL POSTER BY TOM DAVIE */
+/* http://studiotwentysix2.com/poster/grid.html */
+/* inspired by Victoria Ninni Bergquist (https://codepen.io/vicbergquist) */
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000000;
+  font-size: 10px;
+}
+
+body * {
+  margin: 0;
+  padding: 0;
+}
+
+.grid {
+  display: grid;
+  height: 595px;
+  width: 420px;
+  background: #3c80b1;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: 6% 18% repeat(4, 19%);
+  border: 10px solid white;
+}
+
+.invgrid {
+  height: 595px;
+  width: 420px;
+  background: transparent;
+  border: 10px solid white;
+  margin-left: -115px;
+  margin-top: -45px;
+  z-index: 99999;
+}
+
+.invgrid2 {
+  height: 595px;
+  width: 420px;
+  background: transparent;
+  border: 100px solid black;
+  margin-left: -310px;
+  margin-top: -135px;
+  z-index: 9999;
+}
+
+@media screen and (max-width: 768px) {
+  .grid .invgrid .invgrid2 {
+    height: calc(595px / 1.15);
+    width: calc(420px / 1.15);
+  }
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-bottom: 207px solid #3c80b1;
+  border-left: 207px solid transparent;
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1);       
+}
+
+.triangle2 {
+  width: 0;
+  height: 0;
+  border-bottom: 104px solid #3c80b1;
+  border-left: 104px solid transparent;
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1);       
+}
+
+.black {
+  background: #000000;
+}
+
+.blue {
+  background: #3c80b1;
+}
+
+.green {
+  background: #2a6900;
+}
+
+.d1cb {
+  grid-row: 1;
+  z-index: 999;
+  width: 5px;
+  height: 595px;
+  margin-left: 207px;
+}
+
+.d2cb {
+  grid-row: 1;
+  z-index: 999;
+  width: 5px;
+  height: 499px;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  margin-left: 105px;
+}
+
+.d3cb {
+  grid-row: 1;
+  z-index: 999;
+  width: 5px;
+  height: 250px;
+  margin-left: -110px;
+  margin-top: 250px;
+
+}
+
+.d4cb {
+  grid-row: 1;
+  z-index: 999;
+  width: 5px;
+  height: 210px;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  margin-left: -213px;
+  margin-top: 250px;
+}
+
+.r1cb {
+  grid-row: 1;
+  width: 90px;
+  height: 20px;
+  margin-top: 333px;
+  margin-left: -303px;
+  z-index: 99;
+}
+
+.tr1cb {
+  grid-row: 3;
+  margin-top: -102px;
+  margin-left: 210px;
+}
+
+.tr2cg {
+  grid-row: 5;
+  margin-top: -11px;
+  margin-left: -105px;
+}
+
+.q1r1 {
+  grid-row: 2;
+  height: 207px;
+  width: 207px;
+  margin-top: 5px;
+  z-index: 99;
+}
+
+.q2r2 {
+  grid-row: 1;
+  height: 20px;
+  width: 20px;
+  margin-left: -20px;
+  margin-top: 1px;
+}
+
+.q3r3 {
+  grid-row: 4;
+  height: 103px;
+  width: 103px;
+  margin-top: -4px;   
+}
+
+.q4r4 {
+  grid-row: 6;
+  height: 103px;
+  width: 103px;
+  margin-top: -126px;  
+  margin-left: 105px; 
+}
+
+.q5r5 {
+  grid-row: 4;
+  height: 40px;
+  width: 40px;
+  margin-top: -4px;  
+  margin-left: 57px; 
+  z-index: 99;
+  border-left: 5px solid #3c80b1;
+  border-bottom: 5px solid #3c80b1;
+}
+
+.q6r6 {
+  grid-row: 5;
+  height: 207px;
+  width: 208px;
+  margin-left: 212px;
+  margin-top: -117px;
+  z-index: 99;
+}
+
+.q7r7 {
+  grid-row: 6;
+  height: 103px;
+  width: 85px;
+  margin-left: 0px;
+  margin-top: -230px;
+  border-left: 20px solid #3c80b1; 
+}
+
+.t1cb {
+  grid-row: 4;
+  width: 220px;
+  margin-top: 206px;
+  z-index: 99999;
+  margin-left: -2px;
+  font-family: 'Khand', sans-serif;    
+}
+
+.t2cg {
+  color: #2a6900;
+  font-family: 'Khand', sans-serif;
+}
