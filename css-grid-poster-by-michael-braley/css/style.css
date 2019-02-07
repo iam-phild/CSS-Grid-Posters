@@ -1,0 +1,108 @@
+/* ORIGINAL POSTER BY Michael Braley */
+/* http://www.graphis.com/entry/c308b374-3bf2-4b2c-9e3f-eefaaf9e3d9b */
+/* inspired by Victoria Ninni Bergquist (https://codepen.io/vicbergquist) */
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000000;
+  font-size: 6px;
+  line-height: 1.4;
+  color: #ffffff;
+}
+
+body * {
+  margin: 0;
+  padding: 0;
+}
+
+.grid {
+  display: grid;
+  height: 595px;
+  width: 420px;
+  background: #ffffff;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: 6% 18% repeat(4, 19%);
+  border-width: 50px 85px 50px 60px;
+  border-color: white;
+  border-style: solid;
+}
+
+@media screen and (max-width: 768px) {
+  .grid .c1cr .c2cb .r1cb .r2cb {
+    height: calc(595px / 1.15);
+    width: calc(420px / 1.15);
+  }
+}
+
+.red {
+  background: #ed1b24;
+}
+
+.blue {
+  background: #0070ba;
+}
+
+.black {
+  background: #000000;
+}
+
+.c1cr {
+  grid-row: 2;
+  margin: auto;
+  display: flex;  
+  height: 230%;
+  width: 230%;
+  border-radius: 100%;
+}
+
+.c2cb {
+  grid-row: 5/7;
+  margin: auto;
+  display: flex;  
+  height: 110%;
+  width: 230%;
+  border-radius: 100%;
+}
+
+.r1cb {
+  grid-row: 5; 
+  display: flex;
+  margin: -75px;  
+  height: 70px;
+  width: 598px;
+  -webkit-transform: rotate(118deg);
+          transform: rotate(118deg);
+}
+
+.r2cb {
+  grid-row: 2;
+  display: flex;
+  margin: -7px 0 0 148px; 
+  height: 70px;
+  width: 70px;
+  -webkit-transform: rotate(28deg);
+          transform: rotate(28deg);
+}
+
+.r3cb {
+  grid-row: 5;   
+  display: flex;  
+  height: 70px;
+  width: 100px;
+  visibility: hidden;  
+}
+
+.t1cw {
+  grid-row: 2;
+  display: flex;
+  margin: 0 -105px 0 44px;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 48px 1px;
+  -webkit-transform: rotate(28deg);
+          transform: rotate(28deg);  
+}
